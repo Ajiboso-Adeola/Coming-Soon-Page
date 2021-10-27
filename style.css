@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Rubik:wght@300;400;600;700&display=swap');
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+body{
+       font-family: 'Josefin Sans' sans-serif;
+       background:Linear, 135deg, from hsl(0, 0%, 100%) ;
+       background-attachment: fixed;
+}
+/* mobileview */
+.header{
+       padding: 2em 3em;
+}
+/* destop view */
+.header2{
+       display: none;
+       padding: 2em 1%;
+       margin:4em
+}
+.header-image{
+       width: 100%;
+       margin-bottom: 4em;
+}
+.main-content{
+       margin: 0 10% 4em;
+}
+.main-text1{
+       text-transform: uppercase;
+       font-size: 3em;
+       font-weight: 600;
+       letter-spacing: 8px;
+       margin: 1rem;
+       color:#413a3a;
+       text-align: center;
+}
+.main_thin{
+       font-size: 2.5rem;
+       font-weight: 300;
+       color: #ce9797;
+}
+.main_block{
+       display: block;
+       text-align: center;
+}
+.main-text2 {
+       text-align: center;
+       color: #ce9797;
+       line-height: 1.5;
+       margin-bottom: 2rem;
+}
+.main-click{
+       position: relative;
+}
+main input[type='email']{
+       padding:1em 0 1em 2em;
+       border-radius: 100px;
+       border: 1px solid #ce9797;
+       background: none;
+       width: 100%;
+       font-family: 'Josefin Sans';
+       font-size: 16px;
+}
+main input[type='email']:focus{
+       outline: none;
+}
+.main-click button{
+       position: absolute;
+       width: 20%;
+       height: 100%;
+       right: 0;
+       border-radius: 100px;
+       border: none;
+       background: linear-gradient(135deg, #f8bfbf,#ec8c8c);
+       cursor: pointer;
+       box-shadow: 2px 2px 10px rgba(15, 11, 13, 0.205);
+}
+.main-click button:hover{
+       opacity: 0.9;
+       box-shadow: 5px 2px 20px rgba(15, 11, 13, 0.205);
+}
+main ::placeholder{
+       font-family: 'Josefin Sans';
+       color: #ce9797;
+}
+.main_show{
+       display: none;
+       margin: 10px 0 0 30px;
+       color: #f96262;
+       font-size: 14px;
+}
+.show2 ::before{
+       content: url("./images/icon-error.svg");
+       position: absolute;
+       left :72%;
+       top: 1em;
+
+}
+/* for desktop view */
+@media(min-width:700px){
+       body{
+              background: url("./images/bg-pattern-desktop.svg");
+              background-size: cover;
+       }
+       main{
+              display:flex
+       }
+       .header{
+              display: none;
+       }
+       .header-image{
+              order: 2;
+              background:url('./images/hero-desktop.jpg');
+              background-repeat: no-repeat;
+              width: 100%;
+       }
+       .img-mobile{
+              display: none;
+       }
+       .header2{
+              display: block;
+       }
+      main.main-content{
+              height: 90vh;
+              margin-bottom: 0;
+
+       }
+       main.text1{
+              font-size: 5em;
+
+       }
+       main.thin{
+              font-size: 4rem;
+       }
+       main.block{
+              text-align: left ;
+       }
+       main.text2{
+              text-align: left;
+       }
+}
+.attribution { font-size: 12px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
